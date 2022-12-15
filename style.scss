@@ -1,0 +1,594 @@
+@use "colors" as *;
+@use "fonts" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(img/baggrundNEW.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.logo img {
+    position: absolute;
+    padding: 5px 10px 10px 2%;
+    color: #ffffff;
+    max-width: 80px;
+    max-height: 80px;
+    float: left;
+    z-index: 1;
+
+    // transform: translateX(5%);
+
+}
+
+
+
+nav {
+
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+
+    // padding-bottom: 30px;
+
+
+
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: right;
+        padding: 0 5% 20px 0;
+        margin-bottom: auto;
+        z-index: 1;
+
+
+
+        li {
+            padding: 20px 25px 0 25px;
+
+
+            a {
+                text-decoration: none;
+                color: $White;
+                @include Breadtext;
+                font-weight: bold;
+                font-size: 17px;
+
+
+                &:hover {
+                    color: $Red;
+                }
+            }
+        }
+    }
+}
+
+// .hero-img {
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url(img/COLOURBOX3633709.jpg);
+//     height: 94vh;
+//     width: 100vw;
+//     background-size: cover;
+//     background-position: center;
+//     max-width: 100%;
+//     max-height: 100%;
+//     margin: 0 0 100px 0;
+
+
+.herovid {
+
+    // height: 1000px;
+    // width: 1775px;
+
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    z-index: -1;
+    object-fit: fill;
+
+
+    video {
+        width: 100% !important;
+        height: auto !important;
+
+    }
+
+    .bbqvid {
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+
+
+
+
+// Om DM i Amerikansk BBQ
+
+.container1 {
+    background-color: $Transparentblack;
+    max-width: 100%;
+    margin: 100px 0;
+    padding: 70px 15%;
+    color: $White;
+
+    h1 {
+        text-align: center;
+        @include Titletext;
+        text-shadow: 0 2px 5px #111111;
+    }
+
+    p {
+        @include Breadtext;
+    }
+}
+
+// Cirkel knapper ting
+
+.container2 {
+    background-color: $Transparentblack;
+    max-width: 100%;
+    margin: 100px 0;
+    padding: 70px 15%;
+    color: $White;
+    display: flex;
+
+    a {
+        color: $White;
+        text-decoration: none;
+    }
+
+    .c2-item1 {
+        flex-grow: 1;
+
+        .c2-i1-circle {
+            background-color: rgba(85, 85, 85, 0.573);
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-image: url(/img/Show\ dem\ trophies.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100px 89.5px;
+            transition: 0.03s;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 2em 0.1em $White;
+                cursor: pointer;
+                // filter: invert(100%)
+
+            }
+
+
+
+        }
+
+        h1 {
+            text-align: center;
+            @include Titletext;
+            text-shadow: 0 2px 5px #1b1414;
+            margin: 20px 0 5px;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+
+
+
+        p {
+            @include Breadtext;
+            text-align: center;
+        }
+
+    }
+
+    .c2-item2 {
+        flex-grow: 1;
+
+        .c2-i2-circle {
+            background-color: rgba(85, 85, 85, 0.573);
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-image: url(/img/Show\ dem\ dates.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100px 89.5px;
+            transition: 0.03s;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 2em 0.1em $White;
+                cursor: pointer;
+                // filter: invert(100%)
+
+            }
+
+
+
+        }
+
+        h1 {
+            text-align: center;
+            @include Titletext;
+            margin: 20px 0 5px;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+
+        p {
+            @include Breadtext;
+            text-align: center;
+        }
+
+    }
+
+    .c2-item3 {
+        flex-grow: 1;
+
+        .c2-i3-circle {
+            background-color: #55555592;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-image: url(/img/Show\ dem\ Info.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100px 89.5px;
+            transition: 0.03s;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 2em 0.1em $White;
+                cursor: pointer;
+                // filter: invert(100%)
+
+            }
+
+
+
+        }
+
+        h1 {
+            text-align: center;
+            @include Titletext;
+            margin: 20px 0 5px;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+
+        p {
+            @include Breadtext;
+            text-align: center;
+        }
+
+    }
+}
+
+// Billed slider
+
+.container3 {
+    background-color: $Transparentblack;
+    max-width: 100%;
+    margin: 100px 0;
+    padding: 70px 15%;
+    color: $White;
+
+}
+
+
+.footer {
+    background-color: $Black;
+    padding: 50px 15%;
+    display: flex;
+
+
+    .footertitle {
+        @include Titletext;
+        font-size: 20px;
+        color: $White;
+        // text-align: center;
+        padding: 20px 5% 20px 5%;
+
+    }
+
+
+    h1 {
+        @include Titletext;
+        font-size: 20px;
+        color: $White;
+        // text-align: center;
+        padding: 20px 5% 20px 5%;
+
+    }
+
+    p {
+        @include Breadtext;
+        // font-size: 20px;
+        color: $White;
+        // text-align: center;
+        padding: 0px 5% 20px 5%;
+
+    }
+
+    .f-item1 {
+        flex-grow: 1;
+        max-width: 33%;
+        height: auto;
+        padding: 0 20px 0 20px;
+
+    }
+
+    .f-item2 {
+
+        height: auto;
+        flex-grow: 1;
+        max-width: 33%;
+        padding: 0 20px 0 20px;
+
+        .btn {
+            background-color: rgba(85, 85, 85, 0.573);
+            color: $White;
+            margin: 0 0 5px 10px;
+            @include Breadtext;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 2em 0.1em $White;
+                cursor: pointer;
+                color: $White;
+                background-color: rgba(85, 85, 85, 0.573);
+
+            }
+        }
+
+        .box {
+            @include Breadtext;
+            outline: none;
+            border-radius: 6px;
+            height: 35px;
+            padding: 0 0 0 8px;
+        }
+    }
+
+    .f-item3 {
+
+        height: auto;
+        flex-grow: 1;
+        max-width: 33%;
+        padding: 0 20px 0 20px;
+        
+
+    }
+
+}
+
+@media (max-width: 1175px) {
+
+    .logo img {
+        max-width: 70px;
+        max-height: 70px;
+    
+        // transform: translateX(5%);
+    
+    }
+
+    
+
+    .container1 {
+
+        h1{
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .container2 {
+
+        .c2-item1 {
+
+            .c2-i1-circle {
+                height: 125px;
+                width: 125px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .c2-item2 {
+
+            .c2-i2-circle {
+                height: 125px;
+                width: 125px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .c2-item3 {
+
+            .c2-i3-circle {
+                height: 125px;
+                width: 125px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+    }
+
+    .footer {
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+        .f-item1 {
+            max-width: 75%;
+        }
+
+        .f-item2 {
+            max-width: 75%;
+        }
+
+        .f-item3 {
+            max-width: 75%;
+        }
+    }
+}
+
+@media(max-width: 625px) {
+
+    nav {
+
+        ul {
+            padding: auto;
+
+            li {
+                padding: 20px 7px 0 7px;
+                
+                a {
+                    font-size: 15px;
+
+                }
+            }
+        }
+    }
+
+    .container2 {
+        flex-direction: column;
+
+        .c2-item1 {
+
+            .c2-i1-circle {
+                height: 140px;
+                width: 140px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .c2-item2 {
+
+            .c2-i2-circle {
+                height: 140px;
+                width: 140px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .c2-item3 {
+
+            .c2-i3-circle {
+                height: 140px;
+                width: 140px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+    }
+    
+    .footer {
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+        h1{
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 11px;
+        }
+
+        .f-item1 {
+            max-width: 100%;
+        }
+
+        .f-item2 {
+            max-width: 100%;
+        }
+
+        .f-item3 {
+            max-width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/* test */
+nav.scrolled {
+    background-color: $Black;
+    transition: background-color 200ms linear;
+}

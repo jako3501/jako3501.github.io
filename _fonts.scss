@@ -1,0 +1,15 @@
+$Primaryfont: Helvetica, sans-serif;
+$Titlefont: poster-cut-neue, sans-serif;
+
+@mixin Breadtext {
+    font-family: $Primaryfont;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+@mixin Titletext {
+    font-family: $Titlefont;
+    font-size: 40px;
+}
+
+@import url("https://use.typekit.net/ksv2pnb.css");

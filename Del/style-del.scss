@@ -1,0 +1,285 @@
+@use "../colors" as *;
+@use "../fonts" as *;
+
+@import url("https://use.typekit.net/ksv2pnb.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(19, 18, 18);
+    background: radial-gradient(circle, rgba(19, 18, 18, 1) 0%, rgba(34, 33, 33, 1) 42%, rgba(41, 40, 40, 1) 66%, rgba(67, 66, 66, 1) 96%, rgba(85, 85, 85, 1) 100%);
+}
+
+nav {
+
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+
+    // padding-bottom: 30px;
+
+
+
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: right;
+        padding: 0 5% 20px 0;
+        margin-bottom: auto;
+        z-index: 1;
+
+
+
+
+        li {
+            padding: 20px 25px 0 25px;
+
+
+            a {
+                text-decoration: none;
+                color: $White;
+                @include Breadtext;
+                font-weight: bold;
+                font-size: 17px;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.logo img {
+    position: absolute;
+    padding: 5px 10px 10px 2%;
+    color: #ffffff;
+    float: left;
+    z-index: 1;
+    pointer-events: fill;
+    /* SVG-only */
+    max-width: 80px;
+    max-height: 80px;
+}
+
+@media (max-width: 770px) {
+    
+    .container-Login {
+        img {
+            display: none;
+
+            
+        }
+    }
+}
+
+
+.container-Login {
+    color: $White;
+    padding-top: 50px;
+
+    .btn-btn-primary {
+        background-color: rgba(85, 85, 85, 0.573);
+        color: $White;
+        margin: 0 0 5px 10px;
+        @include Breadtext;
+        padding: 6px 12px;
+        border: none;
+        max-width: 80px;
+        max-height: 80px;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 2em 0.1em $White;
+            cursor: pointer;
+            color: $White;
+            background-color: rgba(85, 85, 85, 0.573);
+
+
+        }
+    }
+
+}
+
+
+
+.row-g-3 {
+    padding: 20%;
+    align-content: center;
+
+}
+
+
+
+.prices {
+    padding: 0px 15%;
+    color: #ffffff;
+    padding-bottom: 50px;
+
+    h3 {
+        text-align: center;
+        font-family: poster-cut-neue, sans-serif;
+        font-size: 65px;
+        padding-bottom: 20px;
+    }
+
+}
+
+.footer {
+    background-color: $Black;
+    padding: 50px 15%;
+    display: flex;
+
+
+    h1 {
+        @include Titletext;
+        font-size: 20px;
+        color: $White;
+        // text-align: center;
+        padding: 20px 5% 20px 5%;
+
+    }
+
+    p {
+        @include Breadtext;
+        // font-size: 20px;
+        color: $White;
+        // text-align: center;
+        padding: 0px 5% 20px 5%;
+
+    }
+
+    .f-item1 {
+        flex-grow: 1;
+        max-width: 33%;
+        height: auto;
+        padding: 0 20px 0 20px;
+
+    }
+
+    .f-item2 {
+
+        height: auto;
+        flex-grow: 1;
+        max-width: 33%;
+        padding: 0 20px 0 20px;
+
+        .btn {
+            background-color: rgba(85, 85, 85, 0.573);
+            color: $White;
+            margin: 0 0 5px 10px;
+            @include Breadtext;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 2em 0.1em $White;
+                cursor: pointer;
+                color: $White;
+                background-color: rgba(85, 85, 85, 0.573);
+
+            }
+        }
+
+        .box {
+            @include Breadtext;
+            outline: none;
+            border-radius: 6px;
+            height: 35px;
+            padding: 0 0 0 8px;
+        }
+    }
+
+    .f-item3 {
+
+        height: auto;
+        flex-grow: 1;
+        max-width: 33%;
+        padding: 0 20px 0 20px;
+
+    }
+
+}
+
+.btn-btn-primary {
+    padding: 20 50 20 20%;
+}
+
+@media (max-width: 1175px) {
+
+    .logo img {
+        max-width: 70px;
+        max-height: 70px;
+    
+        // transform: translateX(5%);
+    
+    }
+
+    .footer {
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+
+        .f-item1 {
+            max-width: 75%;
+        }
+
+        .f-item2 {
+            max-width: 75%;
+        }
+
+        .f-item3 {
+            max-width: 75%;
+        }
+    }
+}
+
+@media(max-width: 625px) {
+
+    nav {
+
+        ul {
+            padding: auto;
+
+            li {
+                padding: 20px 7px 0 7px;
+                
+                a {
+                    font-size: 15px;
+
+                }
+            }
+        }
+    }
+    
+    .footer {
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+        h1{
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 11px;
+        }
+
+        .f-item1 {
+            max-width: 100%;
+        }
+
+        .f-item2 {
+            max-width: 100%;
+        }
+
+        .f-item3 {
+            max-width: 100%;
+        }
+    }
+}
